@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2 (unreleased)
+1.2 (2018-01-05)
 ----------------
 
 - Use OrderedDict for python2.6
