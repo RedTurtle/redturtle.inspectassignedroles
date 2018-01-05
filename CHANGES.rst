@@ -5,7 +5,10 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix problem with text length in Excel cell
+  using plone resolveuid when getURL() is great
+  then 255.
+  [lucabel]
 
 
 1.0.1 (2018-01-05)

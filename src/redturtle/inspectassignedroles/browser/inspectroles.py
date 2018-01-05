@@ -65,14 +65,18 @@ class InspectRoles(BrowserView):
 
             # avoid to edit original
             newentry = deepcopy(entry)
-            newentry['url'] = brain.getURL()
+            if len(brain.getURL()) < 255:
+                newentry['url'] = brain.getURL()
+            else:
+                purl = api.portal.get().absolute_url()
+                newentry['url'] = '{0}/resolveuid/{1}'.format(purl, brain.UID)
             newentry['title'] = brain.Title
 
             for user in currlr:
                 for role in roles:
                     if role in currlr[user]:
                         newentry[role].append(self.get_user_or_group(user))
-                assigned_local_roles.append(newentry)
+            assigned_local_roles.append(newentry)
 
         return assigned_local_roles
 
