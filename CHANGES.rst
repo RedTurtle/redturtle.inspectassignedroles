@@ -5,7 +5,8 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Use OrderedDict for python2.6
+  [lucabel]
 
 
 1.1 (2018-01-05)

@@ -41,6 +41,7 @@ setup(
         # -*- Extra requirements: -*-
         'plone.api',
         'setuptools',
+        'ordereddict',
         'XlsxWriter'
     ],
     extras_require={},

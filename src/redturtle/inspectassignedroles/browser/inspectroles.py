@@ -1,6 +1,9 @@
 from Products.Five.browser import BrowserView
 from plone import api
-from collections import OrderedDict
+try:
+    from collections import OrderedDict
+except:
+    from ordereddict import OrderedDict
 from copy import deepcopy
 from redturtle.inspectassignedroles.utils import EphemeralStreamIterator
 import xlsxwriter
