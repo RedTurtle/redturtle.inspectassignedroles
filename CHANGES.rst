@@ -5,7 +5,8 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fix problem with some fancy production product.
+  [lucabel]
 
 
 1.2 (2018-01-05)

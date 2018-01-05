@@ -46,6 +46,8 @@ class InspectRoles(BrowserView):
             content = brain.getObject()
             lr = content.__ac_local_roles__
             # check if we have only Owner
+            if not lr:
+                continue
             if lr == {'admin': ['Owner']} or\
                (len(lr.keys()) == 1 and lr.values() == [['Owner']]):
                 continue
@@ -94,17 +96,17 @@ class InspectRoles(BrowserView):
         for i, label in enumerate(header):
             letter = letters[i]
             worksheet.write('{}1'.format(letter),
-                            self.context.translate(label, domain='plone'),
+                            self.context.translate(label, domain='plone').decode('utf-8'),
                             header_format)
         counter = 2
         for row in site_roles:
             for i, key in enumerate(row.keys()):
                 if i > 1:
                     worksheet.write('{}{}'.format(letters[i], counter),
-                                    row[key], cell_format)
+                                    row[key].decode('utf-8'), cell_format)
                 else:
                     worksheet.write('{}{}'.format(letters[i], counter),
-                                    row[key])
+                                    row[key].decode('utf-8'))
             counter += 1
         return
 
@@ -118,7 +120,7 @@ class InspectRoles(BrowserView):
         for i, label in enumerate(header):
             letter = letters[i]
             worksheet.write('{}1'.format(letter),
-                            self.context.translate(label, domain='plone'),
+                            self.context.translate(label, domain='plone').decode('utf-8'),
                             header_format)
 
         counter = 2
@@ -126,10 +128,10 @@ class InspectRoles(BrowserView):
             for i, key in enumerate(row.keys()):
                 if i > 1:
                     worksheet.write('{}{}'.format(letters[i], counter),
-                                    ', '.join(row[key]))
+                                    ', '.join(row[key]).decode('utf-8'))
                 else:
                     worksheet.write('{}{}'.format(letters[i], counter),
-                                    row[key])
+                                    row[key].decode('utf-8'))
             counter += 1
         return
 
