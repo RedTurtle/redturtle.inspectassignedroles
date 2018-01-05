@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3 (unreleased)
+1.3 (2018-01-05)
 ----------------
 
 - Fix problem with some fancy production product.
