@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.2 (unreleased)
+1.0.2 (2018-01-05)
 ------------------
 
 - Fix problem with text length in Excel cell
