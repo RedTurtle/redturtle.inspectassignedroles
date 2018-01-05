@@ -4,12 +4,6 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="redturtle.inspectassignedroles">
 
-  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
-  <include package="z3c.jbot" file="meta.zcml" />
-  <browser:jbot
-      directory="overrides"
-      layer="redturtle.inspectassignedroles.interfaces.IRedturtleInspectassignedrolesLayer"
-      />
 
   <browser:page
       for="*"
@@ -17,12 +11,5 @@
       class=".inspectroles.InspectRoles"
       permission="cmf.ManagePortal" />
       
-
-  <!-- Publish static files -->
-  <plone:static
-      name="redturtle.inspectassignedroles"
-      type="plone"
-      directory="static"
-      />
 
 </configure>

@@ -40,22 +40,10 @@ setup(
     install_requires=[
         # -*- Extra requirements: -*-
         'plone.api',
-        'Products.GenericSetup>=1.8.2',
         'setuptools',
-        'z3c.jbot',
         'XlsxWriter'
     ],
-    extras_require={
-        'test': [
-            'plone.app.testing',
-            # Plone KGS does not use this version, because it would break
-            # Remove if your package shall be part of coredev.
-            # plone_coredev tests as of 2016-04-01.
-            'plone.testing>=5.0.0',
-            'plone.app.contenttypes',
-            'plone.app.robotframework[debug]',
-        ],
-    },
+    extras_require={},
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone
