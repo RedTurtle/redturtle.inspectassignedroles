@@ -8,6 +8,12 @@ Changelog
 - Nothing changed yet.
 
 
+1.0.2 (2018-07-30)
+------------------
+
+- Nothing changed yet.
+
+
 1.0.2 (2018-01-05)
 ------------------
 
